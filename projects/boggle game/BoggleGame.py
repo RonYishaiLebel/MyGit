@@ -1,16 +1,25 @@
+##########IMPORTING##########
+
 from BoggleBoard import BoggleBoard
 from typing import List, Optional, Tuple, Set
 import ex11_utils as EU
 import boggle_board_randomizer as bbr
 import BoggleDisplay as gd
 
+#########CONSTANTS#########
+
+INITIAL_SCORE: int= 0
+GAME_TIME: int = 180
+USED_WORD_MSG: str= "you have already used this word!!!"
+
+################## BOGGLE-GAME CLASS ###################
 
 class BoggleGame:
     def __init__(self, board: BoggleBoard, words: List[str]) -> None:
         self.__board: BoggleBoard = board
-        self.__words = words
-        self.__score = 0
-        self.__time = 180
+        self.__words: list[str] = words
+        self.__score: int = INITIAL_SCORE
+        self.__time: int = GAME_TIME
         self.__used_words: List[str] = []
 
     def get_words(self) -> List[str]:
@@ -51,7 +60,7 @@ class BoggleGame:
         if not valid:
             return word
         if word in self.__used_words:
-            return ("you have already used this word!!!")
+            return (USED_WORD_MSG)
 
         # if valid update words found and score
         self.__used_words.append(word)
