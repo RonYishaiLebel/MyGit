@@ -1,19 +1,19 @@
 from BoggleBoard import BoggleBoard
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Set
 import ex11_utils as EU
 import boggle_board_randomizer as bbr
 import BoggleDisplay as gd
 
 
 class BoggleGame:
-    def __init__(self, board: BoggleBoard, words) -> None:
+    def __init__(self, board: BoggleBoard, words: List[str]) -> None:
         self.__board: BoggleBoard = board
         self.__words = words
         self.__score = 0
         self.__time = 180
         self.__used_words: List[str] = []
 
-    def get_words(self) -> List:
+    def get_words(self) -> List[str]:
         """return the dictionary of words"""
         return self.__words
 
