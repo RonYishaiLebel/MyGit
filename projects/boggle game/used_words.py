@@ -1,6 +1,9 @@
+############################IMPORTING############################
+
 import tkinter as tk
 from typing import List, Tuple
 
+########################USED-WORDS CLASS##########################
 
 class UsedWords:
     def __init__(self, root, text: str, font: Tuple[str, int], bg: str) -> None:
