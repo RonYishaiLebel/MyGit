@@ -1,6 +1,9 @@
+#########################IMPORTING########################
+
 import tkinter as tk
 from typing import Tuple, List
 
+#########################TIMER CLASS######################
 
 class Timer:
 
