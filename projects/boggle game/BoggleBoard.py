@@ -7,7 +7,7 @@ from typing import List, Optional, Tuple
 
 class BoggleBoard:
     def __init__(self, data: List[List[str]]):
-        self.__board = copy.deepcopy(data)
+        self.__board: List[List[str]]] = copy.deepcopy(data)
 
     def cell_list(self) -> List[Tuple[int]]:
         """return all the cordinates of cells in the board"""
