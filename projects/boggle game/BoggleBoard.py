@@ -27,15 +27,15 @@ class BoggleBoard:
 
     def cell_content(self, cell: Tuple[int]) -> str:
         """return the content of given cell"""
-        return str(self.__board[cell[0]][cell[1]])
+        return self.__board[cell[0]][cell[1]]
 
     def paths_word(self, path: List[Tuple[int]]) -> str:
-        """reurn the letters in given path"""
+        """return the letters in given path"""
         res = ""
         for cell in path:
             res += self.cell_content(cell)
         return res
 
-    def get_board(self):
+    def get_board(self) -> List[List[str]]]:
         """return the board"""
         return self.__board
